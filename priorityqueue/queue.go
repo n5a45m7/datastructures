@@ -1,5 +1,7 @@
 package priorityqueue
 
+import "n5a45m7/datastructures/heap"
+
 // HigherPriorityFunc returns true if and only if "a" HAS HIGHER PRIORITY THAN "b"
 type HigherPriorityFunc func(a, b interface{}) bool
 
@@ -15,5 +17,6 @@ type PriorityQueue interface {
 
 // NewPriorityQueue is a Queue creator function
 func NewPriorityQueue(hp HigherPriorityFunc) PriorityQueue {
-	return NewPQHeapBased(hp)
+	// heap based priority queue
+	return heap.NewHeap(heap.HigherPriorityFunc(hp))
 }
