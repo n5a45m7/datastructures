@@ -1,4 +1,4 @@
-module n5a45m7/datastructures
+module github.com/n5a45m7/datastructures
 
 go 1.15
 
